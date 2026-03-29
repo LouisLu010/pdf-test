@@ -29,6 +29,24 @@ pip install -r requirements.txt
 python main.py
 ```
 
+## 生成 Windows EXE（用户无需安装 Python）
+
+要生成可直接运行的 `.exe`：
+
+1. 安装构建依赖：
+   ```bash
+   pip install -r requirements.txt -r dev-requirements.txt
+   ```
+2. 在 Windows 上执行批处理脚本（默认生成单文件、无控制台窗口的可执行程序）：
+   ```bash
+   .\build_exe.bat
+   ```
+   或直接运行命令：
+   ```bash
+   pyinstaller --noconfirm --clean --windowed --onefile --name pdf-annotator main.py
+   ```
+3. 生成的文件位于 `dist\pdf-annotator.exe`，可直接分发给最终用户，无需安装 Python。
+
 ## 快捷键
 
 | 快捷键 | 功能 |
